@@ -1436,6 +1436,21 @@ window.addEventListener("DOMContentLoaded", async function() {
   if ("serviceWorker" in navigator)
     navigator.serviceWorker.register("sw.js").catch(function(){});
 });
+  <script>
+window.addEventListener("load", function () {
+  setTimeout(function () {
 
+    var splash = document.getElementById("pgSplash");
+    if (splash) splash.style.display = "none";
+
+    var login = document.getElementById("pgLogin");
+    if (login) {
+      login.classList.add("on");
+    } else {
+      console.log("pgLogin NOT FOUND");
+    }
+
+  }, 2500);
+});
 </script>
 </body></html>
